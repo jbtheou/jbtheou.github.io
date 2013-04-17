@@ -1,0 +1,43 @@
+---
+layout: page
+title : Jean-Baptiste Théou
+group: navigation
+---
+
+{% include JB/setup %}
+
+<div class="pull-right recent-posts">
+	<h3>Recent Posts</h3>
+	<ul>
+		{% for post in site.posts limit:5 %}
+		  <li><span>{{ post.date | date: "%B %d, %Y" }}</span>  : <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+		{% endfor %}
+	</ul>
+	<h3>Projects</h3>
+	<ul>
+	<li><a href="http://jbtheou.github.io">Wifi RC car</a></li>
+	</ul>
+</div>
+
+<div class="main-content">
+	<blockquote>
+		<p>Welcome on my dev website. You can find some informations about my dev available on github</p>
+		<small>Jean-Baptiste Théou</small>
+	</blockquote>
+	
+	<center>
+		<a href="http://www.linkedin.com/in/jeanbaptistetheou" class="network-icon"><i class="icon-large icon-linkedin"></i></a>
+		<a href="https://github.com/jbtheou" class="network-icon"><i class="icon-large icon-github"></i></a>
+	</center>
+</div>
+
+<script language="javascript">
+	var greetings = [
+		'Hello World',
+		'Olá',
+		'Bonjour',
+		'Konnichiwa',
+	];
+	
+	document.getElementById('page-title').innerHTML = greetings[Math.floor(Math.random() * greetings.length)];
+</script>
